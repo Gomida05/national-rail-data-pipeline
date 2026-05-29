@@ -16,7 +16,7 @@ This repository contains two parser workflows that fetch XML feeds, normalize th
   - `restriction_models.py` contains the restriction models and normalization helpers.
   - `main.py` provides the direct download helper for restriction data.
 - `data/`
-  - `type.xml` and `type.json` store the ticket-type feed and generated export.
+  - `types.xml` and `types.json` store the ticket-type feed and generated export.
   - `restrictions.xml` and `restrictions.json` store the restriction feed and generated export.
 
 ## Quick start
@@ -40,7 +40,7 @@ This repository contains two parser workflows that fetch XML feeds, normalize th
 flowchart LR
     A[National Rail XML feeds] --> B[type/ticket_parser.py]
     A --> C[restriction/restriction_parser.py]
-    B --> D[data/type.json]
+    B --> D[data/types.json]
     C --> E[data/restrictions.json]
     F[restriction/main.py] --> G[data/restrictions.xml]
     G --> C
@@ -51,7 +51,7 @@ flowchart LR
 - `type/ticket_parser.py`
   - downloads the ticket-type feed
   - streams the XML into structured ticket objects
-  - exports the cleaned result to `data/type.json`
+  - exports the cleaned result to `data/types.json`
 
 - `type/ticket_models.py`
   - defines the ticket schema
