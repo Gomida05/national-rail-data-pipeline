@@ -210,7 +210,7 @@ def main():
     parser = TicketParser()
     parser.download_and_parse(
         url="https://opendata.nationalrail.co.uk/api/staticfeeds/4.0/ticket-types",
-        token="",
+        token=YOU_TOKEN_HERE,
         xml_path=parser.xml_path,
         json_path=parser.json_path,
     )

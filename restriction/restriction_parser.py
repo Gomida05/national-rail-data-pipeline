@@ -10,7 +10,6 @@ from dataclasses import asdict
 from pathlib import Path
 import xml.etree.ElementTree as ET
 import requests
-from main import TOKEN
 from typing import List
 
 from restriction_models import (
@@ -163,7 +162,7 @@ def main():
     parser = TicketRestrictionParser()
     parser.download_and_parse(
         url="https://opendata.nationalrail.co.uk/api/staticfeeds/4.0/ticket-restrictions",
-        token=TOKEN,
+        token=YOU_TOKEN_HERE,
         xml_path=parser.xml_path,
         json_path=parser.json_path,
     )
